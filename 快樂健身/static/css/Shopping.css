@@ -1,0 +1,208 @@
+/* Google Font Poopins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=ZCOOL+KuaiLe&display=swap');
+
+
+
+
+body{
+    /* height: 100vh; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+    
+}
+
+/* 第四步 */
+.product-card{
+    position: relative;
+    max-width: 355px;
+    width: 100%;
+    border-radius: 25px;
+    background: #fff;
+    padding: 20px 30px 30px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    overflow: hidden;
+    
+}
+
+/* 第三步 */
+.product-card .logo-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 第一步 */
+ .product-card .logo-card img{
+    height: 50px;
+    width: 60;
+    /*  */
+    object-fit: cover;
+}
+/* 第二步 */
+.product-card .logo-card i{
+    font-size: 27px;
+    color: #707070;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+/* 第七步 */
+.product-card .logo-card i:hover{
+    color: #333;
+}
+/* 第九步 */
+.product-card .main-images{
+    position: relative;
+    height: 210px;
+}
+/* 第八步 */
+/* 利用position調位址 */
+.product-card .main-images img{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    left: 55px;
+    top: -40px;
+    /* 這一步直接把圖片壓進去框框 */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.product-card .main-images img.active{
+    opacity: 1;
+}
+/* 第十步 */
+.product-card .protein-details .protein_name{
+    font-size: 24px;
+    font-weight: 500;
+    color: #161616;
+}
+/* 第十一步 */
+.product-card .protein-details p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+}
+/* 第十二步 */
+.product-card .protein-details .star i{
+    margin: 0 -1px;
+    color: #333;
+}
+/* 第十三步 */
+.product-card .flavor-price .flavor-option{
+    display: flex;
+    align-items: center;
+}
+/* 第二十步 */
+.flavor-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 第十四步 */
+.flavor-price .flavor-option .flavor{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 8px;
+}
+/* 第十五步 */
+.flavor-option .circles {
+    display: flex;
+}
+/* 第十六步 */
+.flavor-option .circles .circle{
+    height: 18px;
+    width: 18px;
+    background: #cda581;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+/* 第二一步 */
+.flavor-option .circles .circle.milk-tea.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #cda581;
+}
+/* 第二二步 */
+.flavor-option .circles .circle.chocolate.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #d2691e;
+}
+.flavor-option .circles .circle.chocolate{
+    background: #d2691e;
+}
+/* 第二三步 */
+.flavor-option .circles .circle.matcha.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #b7ba6b;
+}
+.flavor-option .circles .circle.matcha{
+    background: #b7ba6b;
+}
+/* 第十七步 */
+.flavor-price .price{
+    display: flex;
+    flex-direction: column;
+}
+/* 第十八步 */
+.flavor-price .price .price_num{
+    font-size: 25px;
+    font-weight: 600;
+    color: #707070;
+}
+/* 第十九步 */
+.flavor-price .price .price_letter{
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #707070;
+}
+
+
+
+
+/* 第二四步 */
+.product-card .button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* 第二六步 */
+.product-card .button .button-layer{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg,#9708cc,#43cbff, #9708cc, #43cbff );
+    transition: all 0.4s ease;
+    border-radius: 25px;
+}
+/* 第二七步 */
+.product-card .button:hover .button-layer{
+    left: 0;
+}
+/* 第二五步 */
+.product-card .button button{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+

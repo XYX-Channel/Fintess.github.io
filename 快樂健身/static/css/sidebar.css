@@ -1,0 +1,94 @@
+#commodity{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    background: white;
+    user-select: none;
+    margin-top: 150px;
+}
+
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #936733;
+    transition: all .5s ease;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(225, 225, 225, 1);
+    /* border-bottom: 1px solid black; */
+    transition: .4s;
+    /* 清除底線 */
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+#check{
+    /* 不要被看見 */
+    display: none;
+}
+
+label #btn,label #cancel{
+    /* 位子浮動 */
+    position: absolute;
+    /* 屬標變手指 */
+    cursor: pointer;
+}
+/*sidebar按鈕*/
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    margin-top: 80px;
+    position: fixed;
+    transition: all .5s;
+}
+/*取消按鈕*/
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: black;
+    margin-top: 80px;
+    position: fixed;
+    transition: all .5s ease;
+}
+/*點擊之後sidebar靠左*/
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    /* 針對滑鼠事件的屬性 可以穿越該元素，點擊到下方的元素 */
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ body{
+    margin-left: 250px;
+}

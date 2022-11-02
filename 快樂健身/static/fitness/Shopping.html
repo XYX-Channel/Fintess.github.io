@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="../css/Shopping.css">
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/shoppingheader.css">
+        <script src='https://kit.fontawesome.com/6eef60556d.js' crossorigin='anonymous'></script>
+    </head>
+
+    
+
+
+    <body>
+
+        <section class="banner1"></section>
+            <div class="content1">
+                
+            </div>
+<div class="product-card">
+        <div class="logo-card">
+            <img src="../images/myprotein-logo.png" alt="myprotein-logo">
+            <i class='bx bx-shopping-bag'></i>
+        </div>
+        <div class="main-images">
+            <img id="milk-tea" class="milk-tea active" src="../images/milktea.jpg" alt="milktea">
+            <img id="chocolate" class="chocolate" src="../images/chocolate.jpg" alt="chocolate">
+            <img id="matcha" class="matcha" src="../images/matcha.jpg" alt="matcha">
+        </div>
+    <div class="protein-details">
+        <span class="protein_name">MYPROTEIN</span>
+        <P>**英式奶茶、抹茶拿鐵、黑巧克力、黑巧克力焦糖口味 有二種包裝版本，將隨機出貨，產品本身無異同，敬請放心使用！</P>
+        <div class="star">
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star-half'></i>
+        </div>
+    </div>
+        <div class="flavor-price">
+            <div class="flavor-option">
+                <span class="flavor">Flavour:</span>
+                <div class="circles">
+                    <span class="circle milk-tea active " id="milk-tea"></span>
+                    <span class="circle chocolate " id="chocolate"></span>
+                    <span class="circle matcha " id="matcha"></span>
+                </div>
+            </div>
+            <div class="price">
+                <span class="price_num">$2080</span>
+                <span class="price_letter">只限一周</span>
+            </div>
+        </div>
+        <div class="button">
+            <div class="button-layer"></div>
+            <button>加入購物車</button>
+        </div>
+</div>
+
+
+
+
+<footer>
+    <div class="content">
+        <div class="top">
+            <div class="logo-details">
+                <i class="fab fa-slack"></i>
+                <span class="class logo_name">HAPPY FITNESS</span>
+            </div>
+            <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100009611740528"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCpGGLFkG4heKm6hnJYn5HxA"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <!-- <hr class="sold"> -->
+        <div class="link-boxes">
+            <ul class="box">
+                <li class="link_name">內部連結</li>
+                <li><a href="./Suggest.html">給新手的建議</a></li>
+                <li><a href="./WLK.html">減重知識</a></li>
+                <li><a href="./HIIT.html">高強度間歇訓練</a></li>
+            </ul>
+            <ul class="box">
+                <li class="link_name">外部連結</li>
+            <li><a href="https://www.youtube.com/channel/UCpGGLFkG4heKm6hnJYn5HxA">健人蓋伊</a></li>
+            <li><a href="https://www.peeta.tw/category/nutrition/">營養學</a></li>
+            <li><a href="https://blog.vitabox.com.tw/2020/05/ketogenic-diet-introduction/?gclid=CjwKCAjw-8qVBhANEiwAfjXLrqinTNpdrPn0SYX5SMmila-LpPC4jfrEa0JSrqOGmHI-3-y0y9VOkhoCIL4QAvD_BwE">生酮飲食</a></li>
+            </ul>
+            <ul class="box">
+                <li class="link_name">參考資料</li>
+                <li><a href="https://www.peeta.tw/">PEETA FITNESS健身網</a></li>
+                <li><a href="https://fashion.ettoday.net/news/1808947">減重知識</a></li>
+                <li><a href="https://www.womenshealthmag.com/tw/fitness/work-outs/g38048626/high-intensity-interval-training/">高強度間歇訓練</a></li>
+            </ul>
+            <ul class="box input-box">
+                <li class="link_name">Subscribe</li>
+                <li><input type="text" placeholder="Enter your email"></li>
+                <li><input type="button" value="Subscribe"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-details">
+        <div class="bottom_text">
+            <span class="copyright_text">快樂健身 版權所有 &#169; 2022<a href="#">HAPPY FITNESS.</a>All rights reserved</span>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    let circle = document.querySelector(".flavor-option");
+
+    circle.addEventListener("click", (e)=>{
+        let target = e.target;
+        if(target.classList.contains("circle")){
+            circle.querySelector(".active").classList.remove("active");
+            target.classList.add("active");
+            document.querySelector(".main-images .active").classList.remove("active");
+            document.querySelector(`.main-images .${target.id}`).classList.add("active");
+        }
+    });
+</script>
+
+
+
+    </body>
+    
+</html>

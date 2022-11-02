@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+body{
+    /*min-height: 200vh;*/
+    background-color: #eeeceb;
+    transition: all .5s;
+}
+
+header{
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 彈性布局 */
+    display: flex;
+    /* 將元素靠邊對其 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1;
+    /* 動畫過度 */
+    transition: 0.6s;
+}
+
+header .logo{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    /* 轉大寫 */
+    text-transform: uppercase;
+    /* 字間距 */
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul{
+    display: flex;/*設定網頁元素的顯示類型*/
+    justify-content: center;/*操控"主軸上彈性項目的分布"*/
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;/*整列表的顯示功能*/
+}
+
+header ul li a{
+    margin: 0 15px;
+    text-decoration: none;/*不顯示任何文字特效*/
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;/*控制字元間距的屬性*/
+    transition: 0.6s;
+}
+
+
+  /*下拉選單*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.banner1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/gym4.jpg)
+    no-repeat;
+    /*保持圖片原有比例, 裁切長邊*/
+    background-size: cover;
+    /*圖片定位正中間*/
+    background-position: center center;
+    z-index: -1;
+    /* opacity: 0.8; */
+}
+
+/* .banner2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/gym1.jpeg)
+    no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 400px;
+    z-index: -1;
+} */
+
+/* 滑鼠滾動滑鼠滾動後, 改變導航列樣式*/
+header.sticky{
+    padding: 6px 100px;
+    background-color: #fff;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+/*第一張圖片上的字*/
+.content1{
+    position: absolute;
+    bottom: 250px;
+    right: 450px;
+    font-size: 90px;
+    color: #fff;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+    
+}
+/*第一張與第二張的字*/
+.content2{
+    position: absolute;
+    font-size: 50px;
+    
+    right: 400px;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.content4 {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.row1 .content5 #powder{
+    border-radius: 25px;
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 400px;
+  height: 333px;
+}
+
+  .content5{
+    float: left;
+    width: 50%;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .row1::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+     
+
+  /*@media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }*/
+
+
+
+  /*帶標題的圖像懸停效果*/
+
+
+  
+  /*body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+}*/
+
+.container{
+    /*彈性布局 允許換行 水平居中*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 310px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    /*設置過度*/
+    transition: 0.35s;
+} 
+
+.card .text{
+    position: absolute;
+    /* inset相當於top,right,bottom,left均為30px */
+    inset: 30px;
+    padding: 0 18px;
+}
+
+.card .text::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    /*左邊那條線*/
+    border-left: 4px solid rgba(225, 225, 225, 0.8);
+    background-color: rgba(225, 225, 225, 0.5);
+    opacity: 0;
+    /* 過度 */
+    transition: 0.5s;
+    /* 過度延遲時間 */
+    transition-delay: 0.6s;
+}
+
+
+.card .text h2,
+.card .text p{
+    margin-bottom: 6px;
+    opacity: 0;
+    transition: 0.35s;
+}
+
+.card .text h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: translate(30%,0%);
+    transition-delay: 0.3s;
+}
+
+.card .text h2 span{
+    font-weight: 800;
+}
+
+.card .text p{
+    font-weight: 200;
+    transform: translate(0%,30%);
+}
+/* 懸停樣式開始 */
+.card:hover img{
+    opacity: 0.3;
+}
+
+.card:hover .text h2{
+    opacity: 1;
+     transform: translate(0%,0%);
+    transition-delay: 0.4s;
+}
+
+.card:hover .text p{
+    opacity: 0.9;
+    /* 變形 */
+    transform: translate(0%,0%);
+    transition-delay: 0.6s;
+}
+
+.card:hover .text::before{
+    background-color: rgba(225, 225, 225, 0);
+    left: 0;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* .footer {
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+  } */

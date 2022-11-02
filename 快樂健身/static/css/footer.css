@@ -1,0 +1,295 @@
+*{
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+    font-family: "Poppins" , sans-serif;
+}
+
+/* body{
+    min-height: 100vh;
+    width: 100%;
+    background: #eeeceb;
+    
+} */
+footer{
+    /* position: fixed; */
+    background: #140b5c;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    
+}
+/* 製作line-boxes的分隔線 */
+/* footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1050px; 
+    height: 1px;
+    width: 100%;
+    background: #afafb6;
+}  */
+
+footer .content{
+    /* background-color: red; */
+    /* footer已經最大，讓content只有1250 所以最右邊會多一塊 */
+    max-width: 1250px;
+    /* 讓那一塊分成兩部分，一部份在左邊，另一部份在右邊 */
+    margin: auto;
+    /* 定義內邊距，上右下左 */
+    padding: 30px 40px 40px 40px;
+}
+
+footer .content .top{
+    /* 用在外容器(container)，使内原件(item)變一橫排 */
+    display: flex;
+    /* https://w3c.hexschool.com/flexbox/87d66dc4 */
+    /* 交錯軸線來做排版 */
+    align-items: center;
+    /* 以主軸線來排版 */
+    /* 平均分配寬度，第一項和最後一項貼齊邊緣 */
+    justify-content: space-between;
+    /* 跟link_name分開 */
+    margin-bottom: 50px;
+}
+
+.content .top .logo-details{
+    color: #fff;
+    font-size: 30px;
+}
+
+.content .top .media-icons{
+    /* 將icon們橫展示 */
+    display: flex;
+}
+
+.content .top .media-icons a{
+    height: 40px;
+    /* 將icon們的間距調整40px */
+    width: 40px;
+    /* background-color: aqua; */
+    /* https://www.wibibi.com/info.php?tid=110 */
+    /* 定義外邊距，上下 左右 */
+    margin: 0px 8px;
+    /* https://selflearningsuccess.com/css-border-radius/ */
+    /* 調整邊框圓角 */
+    /* 50%=25px的半徑，50px的直徑 */
+    border-radius: 50%;
+    text-align: center;
+    /* 設置行高 */
+    line-height: 40px;
+    color: #fff;
+    font-size: 17px;
+    /* 無底線 */
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.top .media-icons a:nth-child(1){
+    background: #4267b2;
+}
+
+.top .media-icons a:nth-child(1):hover{
+    color: #4267b2;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(2){
+    background: #2cf03f;
+}
+
+.top .media-icons a:nth-child(2):hover{
+    color: #2cf03f;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(3){
+    background: #e1306c;
+}
+
+.top .media-icons a:nth-child(3):hover{
+    color: #e1306c;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(4){
+    background: #1da1f2;
+}
+
+.top .media-icons a:nth-child(4):hover{
+    color: #1da1f2;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(5){
+    background: #ff0000;
+}
+
+.top .media-icons a:nth-child(5):hover{
+    color: #ff0000;
+    background: #fff;
+}
+
+/* footer .content .sold{
+    bottom: 100px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #afafb6, #afafb6, #afafb6);
+} */
+
+/* 調整link-boxes區塊 */
+footer .content .link-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border-top: 1px solid rgba(225, 225, 225, 1); */
+}
+
+footer .content .link-boxes .box{
+    /* background: #ff0000; */
+    width: calc(100% / 5 -10px);
+}
+
+/* 調整link_name */
+.content .link-boxes .box .link_name{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 製作link_name的底線 */
+.link-boxes .box .link_name::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 35px;
+    background: #fff;
+}
+
+.content .link-boxes .box li{
+    margin: 6px 0px;
+    /* 讓li的點點消失 */
+    list-style: none;
+}
+
+/* 調整超連結的部分 */
+.content .link-boxes .box li a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+/* 觸摸超連結時 */
+.content .link-boxes .box li a:hover{
+    opacity: 1;
+    /* 跑出底線 */
+    text-decoration: underline;
+}
+
+.content .link-boxes .input-box{
+    margin-right: 55px;
+}
+
+.link-boxes .input-box input{
+    height: 40px;
+    /* 改變按鈕大小 */
+    width: calc(100% + 55px);
+    /* 外框消失 */
+    outline: none;
+    border: 2px solid #afafb6;
+    background: #140b5c;
+    border-radius: 4px;
+    padding: 0px 15px;
+    font-size: 15px;
+    color: #fff;
+    /* 與link_name有間距 */
+    margin-top: 5px;
+}
+
+.link-boxes .input-box input::placeholder{
+    color: #afafb6;
+    font-size: 16px;
+}
+
+.link-boxes .input-box input[type="button"]{
+    background: #fff;
+    color: #140b5c;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0px;
+    opacity: 0.8;
+    /* 改變屬標形狀 */
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.link-boxes .input-box input[type="button"]:hover{
+    opacity: 1;
+}
+
+footer .bottom-details{
+    width: 100%;
+    background: #0f0844;
+}
+
+footer .bottom-details .bottom_text{
+    /* max-width: 1250px; */
+    /* margin: auto; */
+    /* 字串與bottom-details的間距 */
+    padding: 20px 40px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.bottom-details .bottom_text a:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* @media (max-width: 900px) {
+    footer .content .link-boxes{
+        flex-wrap: wrap;
+    }
+    footer .content .link-boxes .input-box{
+        width: 40%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .content .top .logo-details{
+        font-size: 26px;
+    }
+    .content .top .media-icons a{
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+    footer .content .link-boxes .box{
+        width: calc(100% / 3 - 10px);
+    }
+    footer .content .link-boxes .input-box{
+        width: 60%;
+    }
+        
+} */

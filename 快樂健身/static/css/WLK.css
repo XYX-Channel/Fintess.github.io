@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+body{
+    /*min-height: 200vh;*/
+    background-color: #eeeceb;
+    transition: all .5s;
+}
+
+header{
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 彈性布局 */
+    display: flex;
+    /* 將元素靠邊對其 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1;
+    /* 動畫過度 */
+    transition: 0.6s;
+}
+
+header .logo{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    /* 轉大寫 */
+    text-transform: uppercase;
+    /* 字間距 */
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul{
+    display: flex;/*設定網頁元素的顯示類型*/
+    justify-content: center;/*操控"主軸上彈性項目的分布"*/
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;/*整列表的顯示功能*/
+}
+
+header ul li a{
+    margin: 0 15px;
+    text-decoration: none;/*不顯示任何文字特效*/
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;/*控制字元間距的屬性*/
+    transition: 0.6s;
+}
+
+
+  /*下拉選單*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.banner1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/loseweight.jpg)
+    no-repeat;
+    /*保持圖片原有比例, 裁切長邊*/
+    background-size: cover;
+    /*圖片定位正中間*/
+    background-position: center center;
+    z-index: -1;
+    /* opacity: 0.8; */
+}
+
+/* .banner2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/gym1.jpeg)
+    no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 400px;
+    z-index: -1;
+} */
+
+/* 滑鼠滾動滑鼠滾動後, 改變導航列樣式*/
+header.sticky{
+    padding: 6px 100px;
+    background-color: #fff;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.row1 .content5 #powder{
+    border-radius: 25px;
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 400px;
+  height: 333px;
+}
+
+  .content5{
+    float: left;
+    width: 50%;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .row1::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .figcaption {
+    display: block;
+    background: linear-gradient(90deg, rgba(220, 220, 220, 1) 0%, rgba(220, 220, 220, 0.8) 60%, transparent 100%);
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.5;
+    padding: 10px;
+  }
